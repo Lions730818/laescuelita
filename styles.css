@@ -1,0 +1,139 @@
+/* Estilos para el cuerpo */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f8ff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Estilos para las pantallas */
+.pantalla {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Estilos adaptativos para pantallas pequeñas */
+@media (max-width: 600px) {
+    textarea {
+        width: 100%; /* Usar todo el ancho disponible */
+        height: 60px;
+    }
+
+    button {
+        font-size: 1em; /* Tamaño de fuente más pequeño para pantallas pequeñas */
+        padding: 8px 16px;
+    }
+}
+
+/* Ocultar elemento */
+.oculto {
+    display: none;
+}
+/* aqui definimos la posicion de las imagenes */
+#avatar-container {
+    margin-top: 20px;
+    text-align: center;
+}
+#globo {
+    position: absolute;
+    top: 150px;
+    left: 200px;
+}
+
+#estrella {
+    position: absolute;
+    top: 150px;
+    left: 1000px;
+}
+
+/* Configuración del avatar */
+#avatar {
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
+    border: 3px solid #4CAF50;
+}
+/* Definir la animación para mover la imagen de pocoyo */
+@keyframes mover {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(200px); }
+    100% { transform: translateX(0); }
+}
+
+/* Definir la animación para hacer flotar el globo */
+@keyframes flotar {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-100px); }
+    100% { transform: translateY(0); }
+}
+
+/* Definir la animación para hacer girar la estrella */
+@keyframes girar {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+/* Aplicar la animación a la imagen de pocoyo */
+#avatar {
+    width: 150px; /* Ajusta el tamaño de la imagen */
+    animation: mover 3s infinite; /* Animación continua que dura 3 segundos */
+}
+
+/* Aplicar la animación al globo */
+#globo {
+    width: 100px;
+    animation: flotar 4s infinite ease-in-out;
+}
+
+/* Aplicar la animación a la estrella */
+#estrella {
+    width: 120px;
+    animation: girar 5s infinite linear;
+}
+
+/* Estilos de los botones */
+button {
+    background-color: #6fa3ef;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #4a90e2;
+    transform: scale(1.05);
+}
+
+/* Estilos de la zona de chat */
+#zona-chat {
+    margin-top: 20px;
+}
+
+/* Estilo del área de texto */
+textarea {
+    width: 300px;
+    height: 50px;
+    font-size: 1.1em;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 5px;
+}
+
+/* Animación de aparición suave */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: scale(0.95); }
+    100% { opacity: 1; transform: scale(1); }
+}
+

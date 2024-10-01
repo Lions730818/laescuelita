@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profesor Virtual para Niños</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Pantalla de Inicio -->
+    <div id="pantalla-inicio" class="pantalla">
+        <div id="imagenes-animadas">
+            <img src="imagenes/pocoyo.jpg" alt="Pocoyó en movimiento" id="avatar">
+            <img src="imagenes/globo.jpg" alt="Globo flotando" id="globo">
+            <img src="imagenes/estrella.jpg" alt="Estrella girando" id="estrella">
+            <h1>¡Bienvenido a tu Profesor Virtual!</h1>
+            <button onclick="iniciarApp()">Iniciar</button>
+            <button onclick="mostrarConfiguraciones()">Configuraciones</button>
+            <button onclick="mostrarAyuda()">Ayuda</button>
+        </div>
+    </div>
+
+    <!-- Pantalla de Interacción -->
+    <div id="pantalla-interaccion" class="pantalla oculto">
+        <!-- Imagen de Pocoyó en la pantalla de interacción -->
+        <div id="avatar-interaccion-container">
+        <img src="imagenes/pocoyo.jpg" alt="Avatar del Niño" id="avatar-     interaccion">
+        </div>
+        <div id="zona-chat">
+            <textarea id="entrada-chat" placeholder="Escribe tu pregunta aquí..."></textarea>
+            <button onclick="enviarPregunta()">Enviar</button>
+            <button onclick="activarVoz()">Hablar</button>
+        </div>
+        <div id="respuesta-profesor">
+            <p id="respuesta-texto">Aquí aparecerán las respuestas del profesor.</p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
+
